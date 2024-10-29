@@ -1,0 +1,70 @@
+html, body {
+    display: flex;
+  }
+.toggle-cb{
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    width: 90px;
+    height: 70px;
+  }
+
+.toggle-label {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.toggle-inner {
+    background-color: #ddd;
+    border-radius: 34px;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #aaa;
+    transition: background-color 0.4s;
+}
+
+.toggle-switch {
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid grey;
+    transition: transform 0.4s;
+  }
+
+  input:checked + .toggle-label .toggle-inner {
+    background-color: #e74c3c; /* Red background for "Yes" */
+    color: white;
+  }
+  
+  input:checked + .toggle-label .toggle-switch {
+    transform: translateX(65px);
+  }
+  
+  input:not(:checked) + .toggle-label .toggle-inner {
+    background-color: #ddd; /* Grey background for "No" */
+    color: #aaa;
+  }
+  
+  input:not(:checked) + .toggle-label .toggle-switch {
+    transform: translateX(0);
+  }
+  
+  /* Custom content based on the toggle state */
+  input:checked + .toggle-label .toggle-inner::after {
+    content: "Yes";
+    padding: auto;
+  }
+  
+  input:not(:checked) + .toggle-label .toggle-inner::after {
+    content: "No";
+  }
