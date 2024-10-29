@@ -59,7 +59,6 @@ html, body {
     transform: translateX(0);
   }
   
-  /* Custom content based on the toggle state */
   input:checked + .toggle-label .toggle-inner::after {
     content: "Yes";
     padding: auto;
