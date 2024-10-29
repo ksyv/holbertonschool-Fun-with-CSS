@@ -1,0 +1,40 @@
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+li {
+    display: inline-block;
+    background-color: #f7f7f7;
+    border: 3px solid #8d8d8d;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 40px;
+    padding-top: 1rem;
+
+}
+
+.icon {
+    display: block;
+    background-image: url(images/0-sprite.png);
+    background-size: cover;
+    height: 375px;
+    width: calc(860px / 3);
+}
+
+.i-html {
+    background-position: 0 0px;
+}
+
+.i-css {
+    background-position: calc(860px /3*2);
+}
+
+.i-js {
+    background-position: calc(860px /3);
+}
+
+
